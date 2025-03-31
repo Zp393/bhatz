@@ -18,16 +18,18 @@
     --disabled-color: #555555; /* Muted Gray - Disabled Elements */
 }
 
-.back{
+.back {
     width: 100%;
-    height: auto;
+    min-height: 100vh; /* Ensures it covers the full viewport height */
     position: fixed;
     z-index: -1;
     opacity: 30%;
 }
-.back img{
+
+.back img {
     width: 100%;
-    height: 100dvh;
+    height: 100%;
+    object-fit: cover; /* Keeps the image from shrinking */
 }
 
 header{
@@ -165,6 +167,11 @@ a:hover{
     .home-header{
         font-size: 3rem;
     }
+    .back img {
+        height: auto; /* Allows natural scaling */
+        object-fit: cover; /* Ensures the image fills the space */
+        min-height: 100vh;
+    }
 }
 
 /*  Benefits  */
@@ -219,10 +226,18 @@ h2{
     height: auto;
 }
 
+.port p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
 .port p a{
-    color: #ffd700;
-    font-size: 1.5rem;
+    color: blue ;
+    font-size: 2rem;
     text-decoration: none;
+    font-weight: 900;
 }
 
 @media screen and (max-width: 768px) {
