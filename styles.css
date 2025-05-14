@@ -715,12 +715,25 @@ button:hover {
 }
 
 footer {
-    background-color: var(--bg-color);
-    padding: 1rem;
-    display: flex;
-    justify-content: center;
-    color: var(--white-color);
+  background-color: var(--bg-color);
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  color: var(--white-color);
 }
+
+footer a {
+  color: var(--white-color);
+  text-decoration: underline;
+  margin: 0 0.5rem;
+  color: yellow;
+}
+
+footer a:hover {
+  text-decoration: none;
+  color: var(--accent-color); /* Optional: Add this variable for hover effect */
+}
+
 
 @media screen and (max-width: 768px) {
     .contact-icon p {
